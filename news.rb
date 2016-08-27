@@ -4,7 +4,7 @@ require "sinatra/reloader"
 require "data_mapper"
 require "pry"
 
-DataMapper.setup(:default, "sqlite3::///data/news.db")
+DataMapper.setup(:default, "sqlite3:///data/news.db")
 
 configure do
   enable :sessions
