@@ -9,6 +9,11 @@
       <a href="<%= article.url %>">
         <%= article.title %>
       </a>
+
+      <form action="/<%= article.id %>/destroy" method="post">
+        <button type="submit">Delete</button>
+      </form>
+
     </li>
   <% end %>
 </ul>

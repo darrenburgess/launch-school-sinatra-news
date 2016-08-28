@@ -45,3 +45,12 @@ post "/new_article" do
 
   redirect "/"
 end
+
+post "/:id/destroy" do
+  id = params["id"]
+
+  article = News.get(id)
+  article.destroy
+
+  redirect "/"
+end
