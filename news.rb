@@ -34,3 +34,15 @@ end
 get "/new_article" do
   erb :new_article
 end
+
+post "/new_article" do
+  article = News.new
+  article.url = params["url"]
+  article.title = params["title"]
+  article.date = params["date"]
+
+  article.save
+  binding.pry
+
+  redirect "/"
+end
