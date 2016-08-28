@@ -30,3 +30,7 @@ get "/" do
   @news = News.all(:order => [:date.asc])
   erb :index
 end
+
+get "/new_article" do
+  erb :new_article
+end
