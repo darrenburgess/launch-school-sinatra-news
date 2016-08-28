@@ -15,8 +15,8 @@ class News
   include DataMapper::Resource
 
   property :id, Serial, :required => false
-  property :url, String, :required => false
-  property :title, String, :required => false
+  property :url, Text, :required => false
+  property :title, Text, :required => false
   property :date, Date, :required => false
 end
 
@@ -42,7 +42,6 @@ post "/new_article" do
   article.date = params["date"]
 
   article.save
-  binding.pry
 
   redirect "/"
 end

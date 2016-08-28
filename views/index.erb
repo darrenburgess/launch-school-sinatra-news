@@ -2,7 +2,7 @@
 
 <a href="/new_article">New Article</a>
 
-<ol>
+<ul>
   <% @news.each do |article| %>
     <li>
       <%= article.date %>: 
@@ -11,4 +11,4 @@
       </a>
     </li>
   <% end %>
-</ol>
+</ul>
